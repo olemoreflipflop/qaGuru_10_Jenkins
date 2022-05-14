@@ -4,6 +4,7 @@ import com.codeborne.selenide.Selenide;
 import com.gmail.olemore.pages.RegistrationPage;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -25,7 +26,7 @@ public class StudentRegistrationForm extends TestSetupAndTeardown{
     }
 
     @Test
-    @Story("Fill Registration form with random test data")
+    @DisplayName("Fill Registration form with random data" )
     void setAllInputsTestWithFakeData() {
         step("Fill Registration form", () -> {
                     registrationPage
@@ -61,7 +62,7 @@ public class StudentRegistrationForm extends TestSetupAndTeardown{
 
     //тест без генерации тестовых данных
     @Test
-    @Story("Fill Registration form without random test data")
+    @DisplayName("Fill Registration form without random test data")
     void setAllInputsTestWithDsl() {
         step("Fill Registration form", () -> {
             registrationPage
