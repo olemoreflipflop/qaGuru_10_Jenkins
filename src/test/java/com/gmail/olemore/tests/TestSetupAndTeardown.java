@@ -17,8 +17,8 @@ public class TestSetupAndTeardown {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         Configuration.baseUrl = "https://demoqa.com";
-//        Configuration.browserSize = "1280x1400";
-//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.browserSize = "1280x1400";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         //Добавляем видео в отчет
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -32,7 +32,7 @@ public class TestSetupAndTeardown {
         AllureAttachments.getScreenshot();
         AllureAttachments.getPageSource();
         AllureAttachments.getConsoleLogs();
-        //AllureAttachments.getVideo();
+        AllureAttachments.getVideo();
         closeWebDriver();
     }
 }
