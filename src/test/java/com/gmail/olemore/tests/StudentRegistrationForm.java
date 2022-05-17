@@ -2,7 +2,6 @@ package com.gmail.olemore.tests;
 
 import com.codeborne.selenide.Selenide;
 import com.gmail.olemore.pages.RegistrationPage;
-import io.qameta.allure.Story;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
