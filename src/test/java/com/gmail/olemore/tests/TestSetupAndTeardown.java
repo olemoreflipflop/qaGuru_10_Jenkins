@@ -23,12 +23,13 @@ public class TestSetupAndTeardown {
         String password = config.password();
         String selenoidUrl = System.getProperty("remote", "selenoid.autotests.cloud/wd/hub");
         Configuration.remote = "https://" + login + ":" + password + "@" + selenoidUrl;
-        Configuration.baseUrl = "https://demoqa.com";
 
         String browser = System.getProperty("browser", "chrome");
         String browserSize = System.getProperty("browserSize", "1240x1400");
+        String baseUrl = System.getProperty("baseUrl", "https://demoqa.com");
         Configuration.browser = browser;
         Configuration.browserSize = browserSize;
+        Configuration.baseUrl = baseUrl;
 
         //Добавляем видео в отчет
         DesiredCapabilities capabilities = new DesiredCapabilities();
