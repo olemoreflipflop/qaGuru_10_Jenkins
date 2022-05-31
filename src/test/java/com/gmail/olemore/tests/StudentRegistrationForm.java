@@ -12,7 +12,7 @@ import static com.gmail.olemore.testData.RegistrationFormData.*;
 import static io.qameta.allure.Allure.step;
 
 @Tag("demoqa")
-public class StudentRegistrationForm extends TestSetupAndTeardown{
+public class StudentRegistrationForm extends TestBase{
 
     RegistrationPage registrationPage = new RegistrationPage();
 
@@ -85,7 +85,7 @@ public class StudentRegistrationForm extends TestSetupAndTeardown{
         //Проверка формы регистрации
         step("Check submitted Registration form data", () -> {
             registrationPage.checkResultsValue("Student Name", "Olga Filippova")
-                    .checkResultsValue("Student Email", "qqq@gmail.com")
+                    .checkResultsValue("Student Email", "qq8q@gmail.com")
                     .checkResultsValue("Gender", "Female")
                     .checkResultsValue("Mobile", "1234567890")
                     .checkResultsValue("Date of Birth", "26 May,1995")
